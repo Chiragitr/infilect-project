@@ -25,7 +25,7 @@ SECRET_KEY = 'onr=0mb#5yuhb!g_403nz4i1%utboc3d4)a2b+a^$1fhwl@1dd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -119,7 +119,7 @@ USE_TZ = True
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 30
 }
 
 # Static files (CSS, JavaScript, Images)
