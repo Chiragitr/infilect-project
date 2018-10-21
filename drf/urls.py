@@ -27,11 +27,9 @@ urlpatterns = [
     url(r'^api/v1/', include(router.urls)),
     url(r'^api/v1/login/', LoginView.as_view()),
     url(r'^api/v1/logout/', LogoutView.as_view()),
-    url(r'^api/v1/groups/', Photo_GroupListView.as_view()),
-
-    url(r'^api/v1/groups/(?P<pk>[0-9]+)/$', Photo_GroupListView.as_view()),
-
+    url(r'^api/v1/groups/$', Photo_GroupListView.as_view()),
+    url(r'^api/v1/group/(?P<pk>[0-9a-zA-Z@]+)/$', Photo_GroupListView.as_view()),
     url(r'^api/v1/photos/(?P<pk>[0-9]+)/$', PhotoListView.as_view()),
     #Query params
-    url(r'^api/v1/photos/(?P<group>[0-9]+)/$', PhotosByGroupIdListView.as_view()),
+    url(r'^api/v1/photos/\?group=(?P<group>[0-9a-zA-Z@]+)/$', PhotosByGroupIdListView.as_view()),
 ]
